@@ -7,10 +7,14 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'baconjs': 'vendor/baconjs/dist/Bacon.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'baconjs': {
+    'format': 'cjs'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,6 +37,7 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/ppsstatus',
   /** @cli-barrel */
 ];
 
