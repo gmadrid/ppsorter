@@ -2,7 +2,6 @@
 
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { MessageService } from '../message.service';
 
 import {
   beforeEach, beforeEachProviders,
@@ -14,6 +13,7 @@ import {
   TestComponentBuilder
 } from '@angular/compiler/testing';
 
+import { MessageService } from '../message.service';
 import { PPSStatusComponent } from './ppsstatus.component';
 
 describe('Component: PPSStatus', () => {

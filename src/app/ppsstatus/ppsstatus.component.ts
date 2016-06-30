@@ -1,7 +1,5 @@
-/// <reference path="../../../../../../typings/globals/baconjs/index.d.ts" />
-import * as Bacon from 'baconjs';
-
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+
 import { MessageService } from '../message.service';
 
 @Component({

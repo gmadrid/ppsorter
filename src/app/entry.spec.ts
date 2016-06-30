@@ -6,6 +6,7 @@ import {
   expect, it, xit,
   async, inject
 } from '@angular/core/testing';
+
 import {Entry} from './entry';
 
 describe('Entry', () => {
