@@ -13,7 +13,7 @@ export class MessageService {
 	constructor() {
 		this.message = Bacon.fromBinder(function(sink) {
 			this.sinkFunction = sink;
-			sink('');
+			sink('QUUX');
 			return function() { /* a no-op */ }
 		}.bind(this));
 	}
