@@ -6,20 +6,15 @@ import * as Bacon from 'baconjs';
 @Injectable()
 export class MessageService {
 
-	public message: Bacon.Observable<any,string>; 
-
-	private sinkFunction: any = null;
+  private messageBus: Bacon.Bus<any,string> = new Bacon.Bus();
+  public message: Bacon.Property<any,string>;
 
 	constructor() {
-		this.message = Bacon.fromBinder(function(sink) {
-			this.sinkFunction = sink;
-			sink('');
-			return function() { /* a no-op */ }
-		}.bind(this));
+    this.message = this.messageBus.toProperty('');
 	}
 
-	AddMessage(msg: String) {
-		this.sinkFunction(msg);
+	AddMessage(msg: string) {
+    this.messageBus.push(msg);
 	}
 
 }
