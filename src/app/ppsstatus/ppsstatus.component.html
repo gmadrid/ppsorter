@@ -1,5 +1,5 @@
-<p>
-  ppsstatus works!
-  <b>{{message}}</b>
-</p>
-<button (click)="clicked()">Message!</button>
+<div>
+	<span>Images: {{entryCount}}</span>
+	<span *ngIf="selectedEntryCount > 0">Selected: {{selectedEntryCount}}</span>
+	<span>{{message}}</span>
+</div>

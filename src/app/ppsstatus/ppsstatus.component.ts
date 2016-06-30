@@ -13,6 +13,8 @@ import { MessageService } from '../message.service';
 })
 export class PPSStatusComponent implements OnInit {
 	public message: String;
+  public entryCount: number = 0;
+  public selectedEntryCount: number = 0;
 
   constructor(public messageService: MessageService) {
   	messageService.message.onValue((msg: String) => {
@@ -21,10 +23,5 @@ export class PPSStatusComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  clicked() {
-  	this.messageService.AddMessage("BOOBOO");
-  	console.log("CLICKED");
   }
 }

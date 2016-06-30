@@ -6,14 +6,14 @@ import * as Bacon from 'baconjs';
 @Injectable()
 export class MessageService {
 
-	public message: any; 
+	public message: Bacon.Observable<any,string>; 
 
 	private sinkFunction: any = null;
 
 	constructor() {
 		this.message = Bacon.fromBinder(function(sink) {
 			this.sinkFunction = sink;
-			sink('QUUX');
+			sink('');
 			return function() { /* a no-op */ }
 		}.bind(this));
 	}
