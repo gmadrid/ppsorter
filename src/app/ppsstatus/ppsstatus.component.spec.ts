@@ -37,13 +37,26 @@ describe('Component: PPSStatus', () => {
     })
   });
 
-  it('should get the message from the MessageService', () => {
+  it('should interact with the MessageService', () => {
     return tcb.createAsync(PPSStatusComponent).then(fixture => {
-        let component = fixture.componentInstance;
+      let component = fixture.componentInstance;
+      let nativeElement = fixture.nativeElement;
+
+      it('by hiding the message when it is empty', () => {
         expect(component.message).toEqual('');
+        expect(nativeElement.querySelector('#msg')).toBe(null);
+      });
+
+      it('by showing the message when it is not null', () => {
         let newValue = 'xiexie';
         ms.AddMessage(newValue);
+        fixture.detectChanges();
+
         expect(component.message).toEqual(newValue);
+        let el = nativeElement.querySelector('#msg');
+        expect(el).not.toBe(null);
+        expect(el.innerHTML).toContain(newValue);
+      });
     })
   });
 

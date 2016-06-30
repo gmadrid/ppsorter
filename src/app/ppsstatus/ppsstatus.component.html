@@ -1,5 +1,5 @@
 <div>
 	<span>Images: {{entryCount}}</span>
 	<span *ngIf="selectedEntryCount > 0">Selected: {{selectedEntryCount}}</span>
-	<span>{{message}}</span>
+	<span id="msg" *ngIf="message.length > 0">{{message}}</span>
 </div>
