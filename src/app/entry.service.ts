@@ -2,7 +2,7 @@
 import {Injectable} from '@angular/core';
 import {Bus, Property} from 'baconjs';
 
-import {Entry} from './entry'
+import {Entry} from './feedly/feedly.service'
 
 type ChangeFunc = (oldEntries: Array<Entry>) => Array<Entry>;
 type IdChangeFunc = (oldIds: Array<string>) => Array<string>;

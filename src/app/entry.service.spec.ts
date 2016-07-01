@@ -2,7 +2,7 @@
 import {beforeEach, beforeEachProviders, describe, xdescribe, expect, it, xit, async, inject} from '@angular/core/testing';
 
 import {EntryService} from './entry.service';
-import {Entry} from './entry';
+import {Entry} from './feedly/feedly.service';
 
 describe('Entry Service', () => {
   beforeEachProviders(() => [EntryService]);
