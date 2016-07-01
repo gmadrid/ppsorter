@@ -1,6 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
-import { MessageService } from '../message.service';
+import {MessageService} from '../message.service';
 
 @Component({
   moduleId: module.id,
@@ -10,16 +10,13 @@ import { MessageService } from '../message.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PPSStatusComponent implements OnInit {
-	public message: String;
+  public message: String;
   public entryCount: number = 0;
   public selectedEntryCount: number = 0;
 
   constructor(public messageService: MessageService) {
-  	messageService.message.onValue((msg: String) => {
-  		this.message = msg;
-  	})
+    messageService.message.onValue((msg: String) => { this.message = msg; })
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
