@@ -5,5 +5,5 @@ import {beforeEach, beforeEachProviders, describe, xdescribe, expect, it, xit, a
 import {Entry} from './entry';
 
 describe('Entry', () => {
-  it('should create an instance', () => { expect(new Entry()).toBeTruthy(); });
+  it('should create an instance', () => { expect(new Entry('fii')).toBeTruthy(); });
 });
